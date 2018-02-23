@@ -195,7 +195,7 @@ extension IAPManager { // Store file managment
         }
     }
     
-    func savePurchasedItems() {
+    @objc func savePurchasedItems() {
         let data = NSKeyedArchiver.archivedData(withRootObject: purchasedProductIds)
         do {
             try data.write(to: purchasedItemsURL(), options: [.atomicWrite, .completeFileProtection])
